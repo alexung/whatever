@@ -12,8 +12,12 @@ class EventsController < ApplicationController
   def create
     @meetup = Event.new(event_params)
     @meetup.save
-      meetup_api(ENV['MEETUP_API_KEY'], params[:zipcode])
+      # meetup_api(ENV['MEETUP_API_KEY'], params[:zipcode])
       redirect_to events_path
+  end
+
+  def show
+    @meetup = Event.find(params[:id])
   end
 
   private
