@@ -1,1 +1,12 @@
-Hello World.
+<h1>Whatever</h1>
+
+<ul>
+  <% @meetups.each do |meetup| %>
+    <li>
+      <%= meetup.title %>
+    </li>
+    <li>
+      <%= meetup.zipcode %>
+    </li>
+  <% end %>
+</ul>
