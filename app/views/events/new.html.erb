@@ -1,0 +1,17 @@
+<h1>Look for Meetups in your area</h1>
+
+<%= form_for :event, url: events_path do |f| %>
+
+  <div>
+    <%= f.label :city, "City: " %>
+    <%= f.text_area :city %>
+  </div>
+
+  <div>
+    <%= f.label :country, "Country: " %>
+    <%= f.text_area :country %>
+  </div>
+
+  <%= f.submit "Enter in events into db" %>
+
+<% end %>

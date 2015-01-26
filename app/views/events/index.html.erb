@@ -1,1 +1,13 @@
-Hello World.
+<h1>Whatever</h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <ul>
+        <li><%= event.title %></li>
+        <li><%= event.group_title %></li>
+        <li><%= event.description %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>
