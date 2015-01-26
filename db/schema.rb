@@ -19,7 +19,9 @@ ActiveRecord::Schema.define(version: 20150116012400) do
   create_table "events", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "zipcode"
+    t.string   "group_title"
+    t.string   "city"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

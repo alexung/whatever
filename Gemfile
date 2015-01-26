@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
+gem 'meetup_client'
+gem 'pry'
 gem 'unicorn'
 gem 'rails_12factor'
 gem 'rails-backbone'

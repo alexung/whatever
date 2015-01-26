@@ -1,12 +1,13 @@
 <h1>Whatever</h1>
 
 <ul>
-  <% @meetups.each do |meetup| %>
+  <% @events.each do |event| %>
     <li>
-      <%= meetup.title %>
-    </li>
-    <li>
-      <%= meetup.zipcode %>
+      <ul>
+        <li><%= event.title %></li>
+        <li><%= event.group_title %></li>
+        <li><%= event.description %></li>
+      </ul>
     </li>
   <% end %>
 </ul>

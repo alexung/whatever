@@ -2,22 +2,22 @@ class EventsController < ApplicationController
   include ApplicationHelper
 
   def index
-    @meetups = Event.all
+    @events = Event.all
   end
 
   def new
-    @meetup = Event.new
+    @event = Event.new
   end
 
   def create
-    @meetup = Event.new(event_params)
-    @meetup.save
-      # meetup_api(ENV['MEETUP_API_KEY'], params[:zipcode])
-      redirect_to events_path
+    @event = Event.new(event_params)
+    @event.save
+      meetup_api(params["event"]["city"], params["event"]["country"])
+      redirect_to root_path
   end
 
   def show
-    @meetup = Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   private
