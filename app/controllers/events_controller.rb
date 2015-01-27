@@ -10,10 +10,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
-    @event.save
-      meetup_api(params["event"]["city"])
-      redirect_to root_path
+    meetup_api(params["event"]["city"])
+    redirect_to root_path
   end
 
   def show
