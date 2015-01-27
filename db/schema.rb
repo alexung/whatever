@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20150116012400) do
     t.string   "country"
     t.string   "event_url"
     t.string   "group_url"
+    t.string   "latitude"
+    t.string   "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
