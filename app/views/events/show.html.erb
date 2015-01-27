@@ -1,1 +1,14 @@
-this is the show page
+<h1><strong>Event Title:</strong>
+  <a href=<%=@event.event_url%>><%= @event.title %></a>
+</h1>
+
+<ul>
+  <li>
+    <strong>Group Title:</strong>
+    <a href=<%=@event.group_url %>><%= @event.group_title %></a>
+  </li>
+  <li>
+    <strong>Description:</strong>
+      <%= @event.description %>
+  </li>
+</ul>
