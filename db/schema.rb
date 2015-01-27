@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20150116012400) do
     t.string   "group_title"
     t.string   "city"
     t.string   "country"
+    t.string   "event_url"
+    t.string   "group_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
