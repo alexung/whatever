@@ -25,14 +25,9 @@ module ApplicationHelper
     end
   end
 
-  # def event_longitude(*args)
-  #   options = args.extract_options!
-  #   lon = options[:lon] || nil
-  # end
-
-  # def event_latitude(*args)
-  #   options = args.extract_options!
-  #   lat = options[:lat] || nil
-  # end
+  def fandango_api(zipcode)
+    time = Time.now.to_i.to_s
+    `curl http://api.fandango.com/v1/?op=theatersbypostalcodesearch&postalcode=` + zipcode.to_s + `&apikey=` + ENV['FANDANGO_KEY'].to_s + ENV['FANDANGO_SECRET'].to_s + Time.now.to_i.to_s
+  end
 
 end

@@ -10,7 +10,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    meetup_api(params["event"]["city"])
+    #meetup_api(params["event"]["city"])
+    binding.pry
+    fandango_api(90621)
     redirect_to root_path
   end
 
